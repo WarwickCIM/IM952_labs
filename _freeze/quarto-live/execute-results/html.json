@@ -1,0 +1,15 @@
+{
+  "hash": "1280fa1c539fbb7d707eb251d9931304",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Quarto live test\"\nformat: \n  live-html:\n    theme:\n      - cosmo\n      - brand\n    toc: true\n\nengine: knitr\n---\n\n## Some text here\n\n        \n\n::: {.cell}\n\n:::\n\n\n\n\n\n::: {.cell}\n```{webr}\nfor (x in 1:5) {\n  print(x ** 2)\n}\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

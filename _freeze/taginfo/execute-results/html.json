@@ -1,0 +1,15 @@
+{
+  "hash": "1427167d41a2d41d70d7290082cdd421",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Taginfo API\"\nauthor: \"Carlos Cámara\"\n---\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(httr)\nlibrary(jsonlite)\n\nquery_api <- function(key) {\n  # Set up the API endpoint URL\n  url <- paste0(\"https://taginfo.openstreetmap.org/api/4/key/chronology\", \"?key=\", key)\n  \n  # Send a GET request to the API endpoint\n  response <- GET(url)\n  \n  # Check if the response was successful\n  if (status_code(response) != 200) {\n    stop(paste(\"Failed to retrieve data from API. Status code:\", status_code(response)))\n  }\n  \n  # Convert the JSON response to a data frame\n  data <- fromJSON(content(response, as = \"text\"), simplifyDataFrame = FALSE)\n  \n  # Convert the data to a data frame\n  df <- data.frame(\n    id = data$tag,\n    date = data$date,\n    nodes = data$nodes,\n    ways = data$ways,\n    \n  )\n  \n  # Return the data frame\n  return(df)\n}\n\n\ntest2 <- do.call(rbind.data.frame, test)\n\ndata <- query_api(\"amenity\")\n```\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

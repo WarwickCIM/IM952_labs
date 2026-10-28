@@ -1,0 +1,133 @@
+---
+title: "Data"
+subtitle: "Working with data locally"
+author: 
+  - name: "Carlos Cámara-Menoyo"
+    affiliation: Centre for Interdisciplinary Methodologies (University of Warwick)
+
+format: 
+    revealjs:
+      theme: [default, ../../styles/warwick-slides.scss, ../../styles/warwick-fonts.scss]
+      footer: "IM952 - Week 5"
+      logo: ../../media/warwick-logo.svg
+      navigation-mode: vertical
+      controls: false
+      transition: slide
+
+bibliography: references.bib
+---
+
+# Labs overview
+
+Using a real case scenario, we wll be interrogating datasets to answer research questions while addressing problems 
+
+# About the research {.smaller background-color="#BBDF46" background-image="media/esrc_digital_good_network.png" background-position="95% 5%" background-size="127px 128px"}
+
+::: r-fit-text
+Can Digital Goods Be Neutral?
+:::
+
+::: r-fit-text
+Evaluating OpenStreetMap’s equity through participatory data visualisation
+:::
+
+The foundations of this work reside on the collaborative work made with an **amazing team**:
+
+:::::: columns
+::: {.column width="30%"}
+UNIVERSITY OF WARWICK
+
+- Dr. Carlos Cámara-Menoyo (PI)
+
+- Dr. Timothy Monteath (Co-I)
+
+- Hazel Cyril, Lilly Makkos (RAs)
+:::
+
+::: {.column width="30%"}
+GEOCHICAS
+
+- Dr. Selene Yang
+
+- Silvia Rivera Alfaro
+
+- Alejandra Canclini
+:::
+
+::: {.column width="30%"}
+ADVISORY GROUP
+
+- Dr. Jorge León (Universidad de Zaragoza)
+
+- Dr. Rachel Palmen (Universitat Oberta de Catalunya)
+:::
+::::::
+
+This project was **funded by the ESRC Digital Good Network**, through their Research Fund 2024-25.
+
+
+## The problem {background-image="media/960px-Nova_totius_Terrarum_Orbis_geographica_ac_hydrographica_tabula_(Hendrik_Hondius)_balanced.jpg" background-opacity="0.4" background-color="black"}
+
+- Historically, **Maps and power have gone hand in hand**.[@crampton2009; @harley2008; @wood1992]
+
+  - Maps are never neutral: they have a political agenda [@haraway1988; @harley1989; @monmonier2018]
+  - Historically used for domination, control and/or surveillance [@foucault1995; @scott2020; @graham2005; @edney1999]
+
+- Critical and Feminist Geography have **critiqued map’s objectivity**:
+
+  - Flagging (unconscious) bias by map-makers (usually men) [@monk1982]
+
+  - Challenging positivist approaches and based exclusively in quantification [@pickles1995]
+
+  - Importance on what is being presented and silenced [@pavlovskaya2009; @kwan2002; @dignazio2020]
+
+  - More than representations: cultural expressions [@turnbull1989]
+
+## Object of study {background-image="media/osm.png" background-opacity=0.6 background-color="black"}
+
+::: r-fit-text
+OpenStreetMap: more than a map
+:::
+
+OSM is the biggest and most precise free/libre spatial database of the world
+
+* It's a **Geospatial Database**
+  * 9.1 billion nodes (2024-03-31) | Data under Open Database License (ODbL)
+  * Flexible data structure based on `key = value` pairs
+* It is also **a map** (or a series of maps)
+  * that have an opinionated representation of the database
+* It is a **global and huge community** (of 10,000,000 users worldwide!):
+  * Anyone can contribute to it:
+  * Adding / Editing map
+  * Deciding what is included and how is represented
+
+## The questions {.center background-color="#BBDF46"}
+
+Some questions we were asking ourselves were:
+
+1. Who is contributing to OSM?
+2. Whow are they contributing?
+3. How equitable and inclusive is OSM's data?
+
+
+
+# Session overview 
+
+Working with your laptops, you will be:
+
+1.  Familiarising with the dataset
+2.  Working with data to answer research questions
+ 
+
+::: note
+
+But this is what we did. This is what you're going to do:
+
+:::
+
+
+# Dataset: 
+
+
+
+# References

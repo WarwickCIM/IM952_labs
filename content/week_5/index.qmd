@@ -1,0 +1,59 @@
+---
+title: "Week 5: Data"
+format: 
+  live-html:
+    theme:
+      - cosmo
+      - brand
+    toc: true
+    css: /styles.css
+
+engine: knitr
+bibliography: references.bib
+---
+
+{{< include ../../_extensions/r-wasm/live/_knitr.qmd >}}
+
+In this week, you will be using your laptops to work with a relatively big research dataset [@cámara-menoyo2026] to answer actual research questions that arose from a research project.
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="/slides/week_5/index.html" title="Slides: Maps, world-views and neutrality"></iframe>
+```
+
+[Open the slides in full screen](/slides/week_5/index.html)
+
+## The dataset
+
+The dataset
+
+## Loading data
+
+The data is provided by you in this folder. You will see two datasets there:
+
+```{webr urls}
+proposals_url <- "/data/proposals.csv"
+votes_url <- "/data/votes.csv"
+
+
+```
+
+Load the two datasets and assign them, respectively, to the variables `proposals` and `votes`.
+
+```{webr}
+#| exercise: ex_load_data
+proposals <- read.csv(______)
+
+
+```
+
+## Some text here
+
+
+
+```{webr}
+library(dplyr)
+
+dplyr::starwars
+```

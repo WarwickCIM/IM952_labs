@@ -1,0 +1,15 @@
+{
+  "hash": "d1f452898fea7627a495ad7aa6876d05",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Week 5: Data\"\nformat: \n  live-html:\n    theme:\n      - cosmo\n      - brand\n    toc: true\n    css: /styles.css\n\nengine: knitr\nbibliography: references.bib\n---\n\n\n::: {.cell}\n\n:::\n\n\n\nIn this week, you will be using your laptops to work with a relatively big research dataset [@cámara-menoyo2026] to answer actual research questions that arose from a research project.\n\n## Slides\n\n```{=html}\n<iframe class=\"slide-deck\" src=\"/slides/week_5/index.html\" title=\"Slides: Maps, world-views and neutrality\"></iframe>\n```\n\n[Open the slides in full screen](/slides/week_5/index.html)\n\n## The dataset\n\nThe dataset\n\n## Loading data\n\nThe data is provided by you in this folder. You will see two datasets there:\n\n\n::: {.cell}\n```{webr}\nproposals_url <- \"/data/proposals.csv\"\nvotes_url <- \"/data/votes.csv\"\n\n```\n:::\n\n\nLoad the two datasets and assign them, respectively, to the variables `proposals` and `votes`.\n\n\n::: {.cell exercise='ex_load_data'}\n```{webr}\n#| exercise: ex_load_data\nproposals <- read.csv(______)\n\n```\n:::\n\n\n## Some text here\n\n\n\n\n::: {.cell}\n```{webr}\nlibrary(dplyr)\n\ndplyr::starwars\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

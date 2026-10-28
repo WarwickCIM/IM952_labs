@@ -1,0 +1,45 @@
+---
+title: "Taginfo API"
+author: "Carlos Cámara"
+---
+
+```{r}
+#| eval: false
+
+
+library(httr)
+library(jsonlite)
+
+query_api <- function(key) {
+  # Set up the API endpoint URL
+  url <- paste0("https://taginfo.openstreetmap.org/api/4/key/chronology", "?key=", key)
+  
+  # Send a GET request to the API endpoint
+  response <- GET(url)
+  
+  # Check if the response was successful
+  if (status_code(response) != 200) {
+    stop(paste("Failed to retrieve data from API. Status code:", status_code(response)))
+  }
+  
+  # Convert the JSON response to a data frame
+  data <- fromJSON(content(response, as = "text"), simplifyDataFrame = FALSE)
+  
+  # Convert the data to a data frame
+  df <- data.frame(
+    id = data$tag,
+    date = data$date,
+    nodes = data$nodes,
+    ways = data$ways,
+    
+  )
+  
+  # Return the data frame
+  return(df)
+}
+
+
+test2 <- do.call(rbind.data.frame, test)
+
+data <- query_api("amenity")
+```

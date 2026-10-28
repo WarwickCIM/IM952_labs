@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "IM952_labs",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "taginfo.html",
+    "href": "taginfo.html",
+    "title": "Taginfo API",
+    "section": "",
+    "text": "library(httr)\nlibrary(jsonlite)\n\nquery_api &lt;- function(key) {\n  # Set up the API endpoint URL\n  url &lt;- paste0(\"https://taginfo.openstreetmap.org/api/4/key/chronology\", \"?key=\", key)\n  \n  # Send a GET request to the API endpoint\n  response &lt;- GET(url)\n  \n  # Check if the response was successful\n  if (status_code(response) != 200) {\n    stop(paste(\"Failed to retrieve data from API. Status code:\", status_code(response)))\n  }\n  \n  # Convert the JSON response to a data frame\n  data &lt;- fromJSON(content(response, as = \"text\"), simplifyDataFrame = FALSE)\n  \n  # Convert the data to a data frame\n  df &lt;- data.frame(\n    id = data$tag,\n    date = data$date,\n    nodes = data$nodes,\n    ways = data$ways,\n    \n  )\n  \n  # Return the data frame\n  return(df)\n}\n\n\ntest2 &lt;- do.call(rbind.data.frame, test)\n\ndata &lt;- query_api(\"amenity\")"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]

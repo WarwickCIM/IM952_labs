@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "content/week_6/taginfo.html",
+    "href": "content/week_6/taginfo.html",
+    "title": "Taginfo API",
+    "section": "",
+    "text": "library(httr)\nlibrary(jsonlite)\n\nquery_api &lt;- function(key) {\n  # Set up the API endpoint URL\n  url &lt;- paste0(\"https://taginfo.openstreetmap.org/api/4/key/chronology\", \"?key=\", key)\n  \n  # Send a GET request to the API endpoint\n  response &lt;- GET(url)\n  \n  # Check if the response was successful\n  if (status_code(response) != 200) {\n    stop(paste(\"Failed to retrieve data from API. Status code:\", status_code(response)))\n  }\n  \n  # Convert the JSON response to a data frame\n  data &lt;- fromJSON(content(response, as = \"text\"), simplifyDataFrame = FALSE)\n  \n  # Convert the data to a data frame\n  df &lt;- data.frame(\n    id = data$tag,\n    date = data$date,\n    nodes = data$nodes,\n    ways = data$ways,\n    \n  )\n  \n  # Return the data frame\n  return(df)\n}\n\n\ntest2 &lt;- do.call(rbind.data.frame, test)\n\ndata &lt;- query_api(\"amenity\")"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "IM952_labs",
@@ -7,17 +21,59 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "taginfo.html",
-    "href": "taginfo.html",
-    "title": "Taginfo API",
-    "section": "",
-    "text": "library(httr)\nlibrary(jsonlite)\n\nquery_api &lt;- function(key) {\n  # Set up the API endpoint URL\n  url &lt;- paste0(\"https://taginfo.openstreetmap.org/api/4/key/chronology\", \"?key=\", key)\n  \n  # Send a GET request to the API endpoint\n  response &lt;- GET(url)\n  \n  # Check if the response was successful\n  if (status_code(response) != 200) {\n    stop(paste(\"Failed to retrieve data from API. Status code:\", status_code(response)))\n  }\n  \n  # Convert the JSON response to a data frame\n  data &lt;- fromJSON(content(response, as = \"text\"), simplifyDataFrame = FALSE)\n  \n  # Convert the data to a data frame\n  df &lt;- data.frame(\n    id = data$tag,\n    date = data$date,\n    nodes = data$nodes,\n    ways = data$ways,\n    \n  )\n  \n  # Return the data frame\n  return(df)\n}\n\n\ntest2 &lt;- do.call(rbind.data.frame, test)\n\ndata &lt;- query_api(\"amenity\")"
+    "objectID": "slides/week_5/index.html#the-problem",
+    "href": "slides/week_5/index.html#the-problem",
+    "title": "Data",
+    "section": "The problem",
+    "text": "The problem\n\nHistorically, Maps and power have gone hand in hand.(Crampton 2009; Harley 2008; Wood 1992)\n\nMaps are never neutral: they have a political agenda (Haraway 1988; Harley 1989; Monmonier 2018)\nHistorically used for domination, control and/or surveillance (Foucault 1995; Scott 2020; Graham 2005; Edney 1999)\n\nCritical and Feminist Geography have critiqued map’s objectivity:\n\nFlagging (unconscious) bias by map-makers (usually men) (Monk and Hanson 1982)\nChallenging positivist approaches and based exclusively in quantification (Pickles 1995)\nImportance on what is being presented and silenced (Pavlovskaya 2009; Kwan 2002; d’Ignazio and Klein 2020)\nMore than representations: cultural expressions (Turnbull and Watson 1989)"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "slides/week_5/index.html#object-of-study",
+    "href": "slides/week_5/index.html#object-of-study",
+    "title": "Data",
+    "section": "Object of study",
+    "text": "Object of study\n\nOpenStreetMap: more than a map\n\nOSM is the biggest and most precise free/libre spatial database of the world\n\nIt’s a Geospatial Database\n\n9.1 billion nodes (2024-03-31) | Data under Open Database License (ODbL)\nFlexible data structure based on key = value pairs\n\nIt is also a map (or a series of maps)\n\nthat have an opinionated representation of the database\n\nIt is a global and huge community (of 10,000,000 users worldwide!):\n\nAnyone can contribute to it:\nAdding / Editing map\nDeciding what is included and how is represented"
+  },
+  {
+    "objectID": "slides/week_5/index.html#the-questions",
+    "href": "slides/week_5/index.html#the-questions",
+    "title": "Data",
+    "section": "The questions",
+    "text": "The questions\nSome questions we were asking ourselves were:\n\nWho is contributing to OSM?\nWhow are they contributing?\nHow equitable and inclusive is OSM’s data?"
+  },
+  {
+    "objectID": "content/week_5/index.html",
+    "href": "content/week_5/index.html",
+    "title": "Week 5: Data",
     "section": "",
-    "text": "About this site"
+    "text": "In this week, you will be using your laptops to work with a relatively big research dataset (Cámara-Menoyo 2026) to answer actual research questions that arose from a research project."
+  },
+  {
+    "objectID": "content/week_5/index.html#slides",
+    "href": "content/week_5/index.html#slides",
+    "title": "Week 5: Data",
+    "section": "Slides",
+    "text": "Slides\n\nOpen the slides in full screen"
+  },
+  {
+    "objectID": "content/week_5/index.html#the-dataset",
+    "href": "content/week_5/index.html#the-dataset",
+    "title": "Week 5: Data",
+    "section": "The dataset",
+    "text": "The dataset\nThe dataset"
+  },
+  {
+    "objectID": "content/week_5/index.html#loading-data",
+    "href": "content/week_5/index.html#loading-data",
+    "title": "Week 5: Data",
+    "section": "Loading data",
+    "text": "Loading data\nThe data is provided by you in this folder. You will see two datasets there:\n\n\n\n\n\n\n\n\nLoad the two datasets and assign them, respectively, to the variables proposals and votes."
+  },
+  {
+    "objectID": "content/week_5/index.html#some-text-here",
+    "href": "content/week_5/index.html#some-text-here",
+    "title": "Week 5: Data",
+    "section": "Some text here",
+    "text": "Some text here"
   }
 ]

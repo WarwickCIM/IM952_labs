@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.37">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
 
-  <title>IM952 - Labs – 5_1_slides</title>
+  <meta name="author" content="Carlos Cámara-Menoyo">
+  <title>IM952 - Labs – Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -30,12 +34,31 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
-  <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-cea5496aa9de01d20cbe98971fe478f2.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -129,38 +152,204 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">5_1_slides</h1>
+  <h1 class="title">Data</h1>
+  <p class="subtitle">Working with data locally</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Carlos Cámara-Menoyo
+</div>
+        <p class="quarto-title-affiliation">
+            Centre for Interdisciplinary Methodologies (University of Warwick)
+          </p>
+    </div>
 </div>
 
 </section>
-<section class="slide level2">
+<section id="labs-overview" class="title-slide slide level1 center">
+<h1>Labs overview</h1>
+<p>Using a real case scenario, we wll be interrogating datasets to answer research questions while addressing problems</p>
+</section>
+
+<section>
+<section id="about-the-research" class="title-slide slide level1 smaller center" data-background-color="#BBDF46" data-background-image="media/esrc_digital_good_network.png" data-background-position="95% 5%" data-background-size="127px 128px">
+<h1>About the research</h1>
+<div class="r-fit-text">
+<p>Can Digital Goods Be Neutral?</p>
+</div>
+<div class="r-fit-text">
+<p>Evaluating OpenStreetMap’s equity through participatory data visualisation</p>
+</div>
+<p>The foundations of this work reside on the collaborative work made with an <strong>amazing team</strong>:</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>UNIVERSITY OF WARWICK</p>
+<ul>
+<li><p>Dr.&nbsp;Carlos Cámara-Menoyo (PI)</p></li>
+<li><p>Dr.&nbsp;Timothy Monteath (Co-I)</p></li>
+<li><p>Hazel Cyril, Lilly Makkos (RAs)</p></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p>GEOCHICAS</p>
+<ul>
+<li><p>Dr.&nbsp;Selene Yang</p></li>
+<li><p>Silvia Rivera Alfaro</p></li>
+<li><p>Alejandra Canclini</p></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p>ADVISORY GROUP</p>
+<ul>
+<li><p>Dr.&nbsp;Jorge León (Universidad de Zaragoza)</p></li>
+<li><p>Dr.&nbsp;Rachel Palmen (Universitat Oberta de Catalunya)</p></li>
+</ul>
+</div></div>
+<p>This project was <strong>funded by the ESRC Digital Good Network</strong>, through their Research Fund 2024-25.</p>
+</section>
+<section id="the-problem" class="slide level2" data-background-image="media/960px-Nova_totius_Terrarum_Orbis_geographica_ac_hydrographica_tabula_(Hendrik_Hondius)_balanced.jpg" data-background-opacity="0.4" data-background-color="black">
+<h2>The problem</h2>
+<ul>
+<li><p>Historically, <strong>Maps and power have gone hand in hand</strong>.<span class="citation" data-cites="crampton2009 harley2008 wood1992">(<a href="#/references" role="doc-biblioref" onclick="">Crampton 2009</a>; <a href="#/references" role="doc-biblioref" onclick="">Harley 2008</a>; <a href="#/references" role="doc-biblioref" onclick="">Wood 1992</a>)</span></p>
+<ul>
+<li>Maps are never neutral: they have a political agenda <span class="citation" data-cites="haraway1988 harley1989 monmonier2018">(<a href="#/references" role="doc-biblioref" onclick="">Haraway 1988</a>; <a href="#/references" role="doc-biblioref" onclick="">Harley 1989</a>; <a href="#/references" role="doc-biblioref" onclick="">Monmonier 2018</a>)</span></li>
+<li>Historically used for domination, control and/or surveillance <span class="citation" data-cites="foucault1995 scott2020 graham2005 edney1999">(<a href="#/references" role="doc-biblioref" onclick="">Foucault 1995</a>; <a href="#/references" role="doc-biblioref" onclick="">Scott 2020</a>; <a href="#/references" role="doc-biblioref" onclick="">Graham 2005</a>; <a href="#/references" role="doc-biblioref" onclick="">Edney 1999</a>)</span></li>
+</ul></li>
+<li><p>Critical and Feminist Geography have <strong>critiqued map’s objectivity</strong>:</p>
+<ul>
+<li><p>Flagging (unconscious) bias by map-makers (usually men) <span class="citation" data-cites="monk1982">(<a href="#/references" role="doc-biblioref" onclick="">Monk and Hanson 1982</a>)</span></p></li>
+<li><p>Challenging positivist approaches and based exclusively in quantification <span class="citation" data-cites="pickles1995">(<a href="#/references" role="doc-biblioref" onclick="">Pickles 1995</a>)</span></p></li>
+<li><p>Importance on what is being presented and silenced <span class="citation" data-cites="pavlovskaya2009 kwan2002 dignazio2020">(<a href="#/references" role="doc-biblioref" onclick="">Pavlovskaya 2009</a>; <a href="#/references" role="doc-biblioref" onclick="">Kwan 2002</a>; <a href="#/references" role="doc-biblioref" onclick=""><span class="nocase">d’Ignazio and Klein</span> 2020</a>)</span></p></li>
+<li><p>More than representations: cultural expressions <span class="citation" data-cites="turnbull1989">(<a href="#/references" role="doc-biblioref" onclick="">Turnbull and Watson 1989</a>)</span></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="object-of-study" class="slide level2" data-background-image="media/osm.png" data-background-opacity="0.6" data-background-color="black">
+<h2>Object of study</h2>
+<div class="r-fit-text">
+<p>OpenStreetMap: more than a map</p>
+</div>
+<p>OSM is the biggest and most precise free/libre spatial database of the world</p>
+<ul>
+<li>It’s a <strong>Geospatial Database</strong>
+<ul>
+<li>9.1 billion nodes (2024-03-31) | Data under Open Database License (ODbL)</li>
+<li>Flexible data structure based on <code>key = value</code> pairs</li>
+</ul></li>
+<li>It is also <strong>a map</strong> (or a series of maps)
+<ul>
+<li>that have an opinionated representation of the database</li>
+</ul></li>
+<li>It is a <strong>global and huge community</strong> (of 10,000,000 users worldwide!):
+<ul>
+<li>Anyone can contribute to it:</li>
+<li>Adding / Editing map</li>
+<li>Deciding what is included and how is represented</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-questions" class="slide level2 center" data-background-color="#BBDF46">
+<h2>The questions</h2>
+<p>Some questions we were asking ourselves were:</p>
+<ol type="1">
+<li>Who is contributing to OSM?</li>
+<li>Whow are they contributing?</li>
+<li>How equitable and inclusive is OSM’s data?</li>
+</ol>
+</section></section>
+<section id="session-overview" class="title-slide slide level1 center">
+<h1>Session overview&nbsp;</h1>
+<p>Working with your laptops, you will be:</p>
+<ol type="1">
+<li>Familiarising with the dataset</li>
+<li>Working with data to answer research questions</li>
+</ol>
+<div class="note">
+<p>But this is what we did. This is what you’re going to do:</p>
+</div>
+</section>
+
+<section id="dataset" class="title-slide slide level1 center">
+<h1>Dataset:</h1>
+
+</section>
+
+<section id="references" class="title-slide slide level1 smaller scrollable">
+<h1>References</h1>
 
 
-
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-crampton2009" class="csl-entry" role="listitem">
+Crampton, Jeremy W. 2009. <em>Mapping: A Critical Introduction to Cartography and GIS</em>. 1st ed. Blackwell Companions to the Ancient World. Wiley. <a href="https://doi.org/10.1002/9781444317411">https://doi.org/10.1002/9781444317411</a>.
+</div>
+<div id="ref-dignazio2020" class="csl-entry" role="listitem">
+<span class="nocase">d’Ignazio, Catherine, and Lauren F Klein</span>. 2020. <em>Data Feminism</em>. Strong Ideas. MIT Press. <a href="https://mitpress.mit.edu/9780262044004/data-feminism/">https://mitpress.mit.edu/9780262044004/data-feminism/</a>.
+</div>
+<div id="ref-edney1999" class="csl-entry" role="listitem">
+Edney, Matthew H. 1999. <em>Mapping an Empire: The Geographical Construction of British India, 1765-1843</em>. University of Chicago Press. <a href="https://press.uchicago.edu/ucp/books/book/chicago/M/bo3683502.html">https://press.uchicago.edu/ucp/books/book/chicago/M/bo3683502.html</a>.
+</div>
+<div id="ref-foucault1995" class="csl-entry" role="listitem">
+Foucault, Michel. 1995. <em>Discipline &amp; Punish: The Birth of the Prison</em>. Vintage Books.
+</div>
+<div id="ref-graham2005" class="csl-entry" role="listitem">
+Graham, Stephen D. N. 2005. <span>“Software-Sorted Geographies.”</span> <em>Progress in Human Geography</em> 29 (5): 562–80. <a href="https://doi.org/10.1191/0309132505ph568oa">https://doi.org/10.1191/0309132505ph568oa</a>.
+</div>
+<div id="ref-haraway1988" class="csl-entry" role="listitem">
+Haraway, Donna. 1988. <span>“Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective.”</span> <em>Feminist Studies</em> 14 (3): 575–99. <a href="https://doi.org/10.2307/3178066">https://doi.org/10.2307/3178066</a>.
+</div>
+<div id="ref-harley1989" class="csl-entry" role="listitem">
+Harley, J. Brian. 1989. <span>“Deconstructing the Map.”</span> <em>Cartographica</em> 26 (2): 1–20. <a href="https://doi.org/10.3138/E635-7827-1757-9T53">https://doi.org/10.3138/E635-7827-1757-9T53</a>.
+</div>
+<div id="ref-harley2008" class="csl-entry" role="listitem">
+Harley, J. Brian. 2008. <em>Maps, Knowledge, and Power</em>. Edited by George L. Henderson and Marvin Waterstone. Routledge. <a href="https://doi.org/10.4324/9780203893074">https://doi.org/10.4324/9780203893074</a>.
+</div>
+<div id="ref-kwan2002" class="csl-entry" role="listitem">
+Kwan, Mei-Po. 2002. <span>“Feminist Visualization: Re-Envisioning GIS as a Method in Feminist Geographic Research.”</span> <em>Annals of the Association of American Geographers</em> 92 (4): 645–61. <a href="https://doi.org/10.1111/1467-8306.00309">https://doi.org/10.1111/1467-8306.00309</a>.
+</div>
+<div id="ref-monk1982" class="csl-entry" role="listitem">
+Monk, Janice, and Susan Hanson. 1982. <span>“On Not Excluding Half of the Human in Human Geography.”</span> <em>The Professional Geographer</em> 34 (1): 11–23. <a href="https://doi.org/10.1111/j.0033-0124.1982.00011.x">https://doi.org/10.1111/j.0033-0124.1982.00011.x</a>.
+</div>
+<div id="ref-monmonier2018" class="csl-entry" role="listitem">
+Monmonier, Mark. 2018. <em>How to Lie with Maps</em>. Third edition. University of Chicago Press.
+</div>
+<div id="ref-pavlovskaya2009" class="csl-entry" role="listitem">
+Pavlovskaya, Marianna. 2009. <em>Feminism, Maps and GIS</em>. Edited by N. J. Thrift and Rob Kitchin. Elsevier. <a href="https://doi.org/10.1016/B978-008044910-4.00025-0">https://doi.org/10.1016/B978-008044910-4.00025-0</a>.
+</div>
+<div id="ref-pickles1995" class="csl-entry" role="listitem">
+Pickles, John. 1995. <em>Ground Truth: The Social Implications of Geographic Information Systems</em>. Guilford Press.
+</div>
+<div id="ref-scott2020" class="csl-entry" role="listitem">
+Scott, James C. 2020. <em>Seeing like a state: how certain schemes to improve the human condition have failed</em>. Veritas paperback edition. Yale agrarian studies. Yale University Press.
+</div>
+<div id="ref-turnbull1989" class="csl-entry" role="listitem">
+Turnbull, David, and Helen Watson. 1989. <em>Maps Are Territories: Science Is an Atlas : A Portfolio of Exhibits</em>. University of Chicago Press.
+</div>
+<div id="ref-wood1992" class="csl-entry" role="listitem">
+Wood, Denis. 1992. <em>The power of maps</em>. New York : Guilford Press.
+</div>
+</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../media/warwick-logo.svg" class="slide-logo"></p>
 <div class="footer footer-default">
-
+<p>IM952 - Week 5</p>
 </div>
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../../../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="../../../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -168,7 +357,7 @@
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
@@ -237,7 +426,7 @@
         rtl: false,
 
         // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'linear',
+        navigationMode: 'default',
 
         // Randomizes the order of slides each time the presentation loads
         shuffle: false,
@@ -301,7 +490,7 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'slide',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',

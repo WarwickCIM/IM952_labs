@@ -2,12 +2,13 @@ project:
   type: website
 
 website:
-  title: "IM952_labs"
+  title: "IM952 - Labs"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - quarto-live.qmd
 
 format:
   html:
